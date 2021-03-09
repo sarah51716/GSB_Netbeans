@@ -6,12 +6,8 @@
  *
  * @category  PPE
  * @package   GSB
- * @author    Réseau CERTA <contact@reseaucerta.org>
- * @author    José GIL <jgil@ac-nice.fr>
- * @copyright 2017 Réseau CERTA
- * @license   Réseau CERTA
- * @version   GIT: <0>
- * @link      http://www.reseaucerta.org Contexte « Laboratoire GSB »
+ * @author    Sarah Delahaye <sarah@delahaye.pro>
+ * @author Beth Sefer
  */
 ?>
 <!DOCTYPE html>
@@ -93,7 +89,7 @@
                                 </a>
                             </li>
                             <li <?php if ($uc == 'validerFrais') { ?>class="active"<?php } ?>>
-                                <a href="index.php?uc=validerFrais&action=saisirFrais">
+                                <a href="index.php?uc=validerFrais&action=visiteuretmois">
                                     <span class="glyphicon glyphicon-ok"></span>
                                     Valider fiche de frais
                                 </a>
@@ -101,7 +97,7 @@
                             <li <?php if ($uc == 'etatFrais') { ?>class="active"<?php } ?>>
                                 <a href="index.php?uc=etatFrais&action=selectionnerMois">
                                     <span class="glyphicon glyphicon-euro"></span>
-                                    Afficher mes fiches de frais
+                                    Suivre le paiement des fiches de frais
                                 </a>
                             </li>
                             <li 

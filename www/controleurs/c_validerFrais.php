@@ -27,7 +27,25 @@ switch ($action) {
         include 'vues/v_visiteuretmois.php';
         //chaque case est lie a une vue ici on a cree la vue v_visiteuretmois
         break;
+    case 'afficherFiche' :
+            $leMois = filter_input(INPUT_POST, 'lstMois', FILTER_SANITIZE_STRING);
+            $moisASelectionner = $leMois;
+            $lesFraisHorsForfait = $pdo->getLesFraisHorsForfait($id, $leMois);
+            $lesFraisForfait = $pdo->getLesFraisForfait($id, $leMois);
+            $lesInfosFicheFrais = $pdo->getLesInfosFicheFrais($id, $leMois);
+            if (!is_array ($lesInfosFicheFrais)){
+                ajouterErreur('Pas de fiche de frais pour ce mois');
+                include'vues/v_erreurs.php';
+                include 'vues/v_visiteuretmois.php';
+            }else{
+                include 'vues/v_afficherFrais.php';
+                
+            }
+        break;
+    case 'correctionFraisForfait' :
         
+        
+        break;
 }
 
 /*
